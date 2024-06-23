@@ -3,7 +3,7 @@
     <default-config>
         <!--数据库的连接账号(账号基本上都是root)-->
         <property name="user">root</property>
-        <!--数据库的连接密码-->
+        <!--数据库的连接密码修改测试-->
         <property name="password">root</property>
         <!--获取数据库连接(newsmanagersystem)是数据库的名称-->
         <property name="jdbcUrl">jdbc:mysql://localhost:3306/bookshop</property>
