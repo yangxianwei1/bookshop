@@ -1,9 +1,11 @@
 package edu.sxu.dao.impl;
 
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
 import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.ResultSetHandler;
 import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 
@@ -91,6 +93,36 @@ public class CategoryDaoImpl implements CategoryDao{
 		QueryRunner qr = new QueryRunner();
 		try {
 			  rs = qr.query(JDBCUtils.getCon(), sql,new BeanListHandler<Category>(Category.class));
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			throw new RuntimeException(e);
+		}
+		return rs;
+	}
+
+	public int rowCount() {
+		// TODO Auto-generated method stub
+		String sql = "select count(1) from category";
+		int count = 0;
+		QueryRunner qr = new QueryRunner(); 
+		try {
+			count = qr.query(JDBCUtils.getCon(),sql, new BeanHandler<Integer>(Integer.class));
+			return count;
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			throw new RuntimeException(e);
+		}
+		 
+	}
+
+	public List<Category> queryByPage(int startLine, int size) {
+		// TODO Auto-generated method stub
+		List<Category> rs = null;
+		String sql = "select * from category limit ?,?";
+		QueryRunner qr = new QueryRunner();
+		try {
+			  rs = qr.query(JDBCUtils.getCon(), sql,new BeanListHandler<Category>(Category.class),startLine,size);
 			
 		} catch (Exception e) {
 			// TODO: handle exception

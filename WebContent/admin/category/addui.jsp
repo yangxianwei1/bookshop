@@ -7,16 +7,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="">
+<form action="/bookshop/admin/category"  method="post" >
+	<input type="hidden" name="method" value="addCategory">
         <table>
             <tr>
                 <td> 图书类型: <input type= "text" name = "cname"></td>
             </tr>
             <tr>
-                <td> 类型描述: <input type= "text" name = "cname"></td>
+                <td> 类型描述: <input type= "text" name = "cdesc"></td>
             </tr>
             <tr>
-            	<td><input type ="button"  value="提交"></td>
+            	<td><input type ="submit"  value="提交"></td>
             </tr>
         </table>
     </form>

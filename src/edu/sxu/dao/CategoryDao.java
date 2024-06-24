@@ -16,6 +16,9 @@ public interface CategoryDao {
 	Category findCategoryById(Integer id);
 	void delete(Integer id);
 	List<Category> findAll();
+//	加上分页数据
+	int rowCount();
+	List<Category> queryByPage(int startLine, int size);
 	
 
 }
