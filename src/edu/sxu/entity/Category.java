@@ -1,20 +1,20 @@
 package edu.sxu.entity;
 
 public class Category {
-	private Integer id;
-	private String name;
+	private Integer cid;
+	private String cname;
 	private String cdesc;
-	public Integer getId() {
-		return id;
+	public Integer getCid() {
+		return cid;
 	}
-	public void setId(Integer id) {
-		this.id = id;
+	public void setCid(Integer cid) {
+		this.cid = cid;
 	}
-	public String getName() {
-		return name;
+	public String getCname() {
+		return cname;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setCname(String cname) {
+		this.cname = cname;
 	}
 	public String getCdesc() {
 		return cdesc;
@@ -24,8 +24,10 @@ public class Category {
 	}
 	@Override
 	public String toString() {
-		return "Category [id=" + id + ", name=" + name + ", cdesc=" + cdesc + "]";
+		return "Category [cid=" + cid + ", cname=" + cname + ", cdesc=" + cdesc + "]";
 	}
 	
+	
+	 
 
 }

@@ -68,7 +68,7 @@
                 <li>类型管理</li>
                 <ul class="findul"   style="margin-left:22px;margin-top: 8px;list-style: none;">
                     <li><a target="mainFrame" href="https://baidu.com">查看类型</a></li>
-                    <li style="margin-top: 5px;">添加类型</li>
+                    <li style="margin-top: 5px;"><a href="/bookshop/admin/category?method=add">添加类型</a></li>
                 </ul>
             </ul>
 

@@ -13,10 +13,10 @@
     <description></description>
     <display-name>CategoryServlet</display-name>
     <servlet-name>CategoryServlet</servlet-name>
-    <servlet-class>edu.sxu.domain.servlet.CategoryServlet</servlet-class>
+    <servlet-class>edu.sxu.servlet.CategoryServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>CategoryServlet</servlet-name>
-    <url-pattern>/category</url-pattern>
+    <url-pattern>/admin/category</url-pattern>
   </servlet-mapping>
 </web-app>
