@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="/bookshop/admin/category"  method="post" >
+<form action="/bookshop/admin/category?method=addUI"  method="post" >
 	<input type="hidden" name="method" value="addCategory">
         <table>
             <tr>

@@ -67,7 +67,7 @@
             <ul class="cman" style="margin-top: 32px;">
                 <li>类型管理</li>
                 <ul class="findul"   style="margin-left:22px;margin-top: 8px;list-style: none;">
-                    <li><a target="mainFrame" href="https://baidu.com">查看类型</a></li>
+                    <li><a target="mainFrame" href="/bookshop/admin/category?method=findUI">查看类型</a></li>
                     <li style="margin-top: 5px;"><a target="mainFrame" href="/bookshop/admin/category/addui.jsp">添加类型</a></li>
                 </ul>
             </ul>

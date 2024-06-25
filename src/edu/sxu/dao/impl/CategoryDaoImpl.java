@@ -22,10 +22,12 @@ public class CategoryDaoImpl implements CategoryDao{
 		category.setCname("科技");
 		category.setCdesc("科技相关类型的图书");
 		
-		System.out.println(test.findAll());
+//		System.out.println(test.findAll());
 ////		test.add(category);;
 //		System.out.println(
 //				test.findCategoryById(1));
+		
+		System.out.println(test.rowCount());
 	}
 	 
 	public void add(Category category) {
@@ -77,13 +79,13 @@ public class CategoryDaoImpl implements CategoryDao{
 		String sql = "delete  from category where cid = ?";
 		try {
 //			  qr.query(JDBCUtils.getCon(), sql,new BeanHandler<Category>(Category.class),id);
-			qr.update(JDBCUtils.getCon(), sql);
+			qr.update(JDBCUtils.getCon(), sql,id);
 		
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			throw new RuntimeException(e);
 		}
-		
+		 
 	}
 
 	public List<Category> findAll() {
@@ -107,7 +109,17 @@ public class CategoryDaoImpl implements CategoryDao{
 		int count = 0;
 		QueryRunner qr = new QueryRunner(); 
 		try {
-			count = qr.query(JDBCUtils.getCon(),sql, new BeanHandler<Integer>(Integer.class));
+			count = qr.query(JDBCUtils.getCon(),sql, new ResultSetHandler<Integer>() {
+
+				public Integer handle(ResultSet rs) throws SQLException {
+					// TODO Auto-generated method stub
+					if (rs.next()) {
+						return rs.getInt(1);
+					}
+					return 0;
+				}
+				
+			});
 			return count;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
