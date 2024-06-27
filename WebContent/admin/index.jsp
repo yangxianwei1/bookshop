@@ -75,7 +75,7 @@
             <ul class="cman" style="margin-top: 32px;">
                 <li>图书管理</li>
                 <ul class="findul"   style="margin-left:22px;margin-top: 8px;list-style: none;">
-                    <li>添加图书</li>
+                    <li><a target = "mainFrame" href="/bookshop/admin/book/addui.jsp">添加图书</a></li>
                     <li style="margin-top: 5px;">查看图书</li>
                 </ul>
             </ul>

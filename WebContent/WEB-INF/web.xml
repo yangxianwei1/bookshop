@@ -28,4 +28,14 @@
     <filter-name>TransactionFilter</filter-name>
     <url-pattern>/admin/*</url-pattern>
   </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BookServlet</display-name>
+    <servlet-name>BookServlet</servlet-name>
+    <servlet-class>edu.sxu.servlet.BookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BookServlet</servlet-name>
+    <url-pattern>/admin/book</url-pattern>
+  </servlet-mapping>
 </web-app>
